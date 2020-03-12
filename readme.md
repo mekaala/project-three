@@ -12,10 +12,16 @@ I created an app designed to combat stress at the workplace. For each environmen
 ## Wireframes
 <img src="/wireframes/DefaultComponents.png" alt="Default Component Layout"/>
 <img src="/wireframes/Home.png" alt="Home Page"/>
+
+### Environment Components
 <img src="/wireframes/Environments.png" alt="Index of Environments"/>
 <img src="/wireframes/SingleEnvironment.png" alt="Individual Environment Page"/>
+
+### Focus Exercise Components
 <img src="/wireframes/Focuses.png" alt="Index of Focus Exercises"/>
 <img src="/wireframes/SingleFocus.png" alt="Individual Focus Exercise"/>
+
+### Relaxation Exercise Components
 <img src="/wireframes/Relaxes.png" alt="Index of Focus Exercises"/>
 <img src="/wireframes/SingleRelax.png" alt="Individual Relax Exercise"/>
 
