@@ -1,6 +1,6 @@
 #  MINDIFY
 
-One of the main inhibitors of individual performance is stress. While acute stress can be beneficial to task completion, chronic stress is hazardous to one's health. Long term stress can develop physical conditions such as heart disease and high blood pressure, and even mental disorders such as anxiety and depression.<h6>1</h6>
+One of the main inhibitors of individual performance is stress. While acute stress can be beneficial to task completion, chronic stress is hazardous to one's health. Long term stress can develop physical conditions such as heart disease and high blood pressure, and even mental disorders such as anxiety and depression (1).
 
 I created an app designed to combat stress at the workplace. For each environment, there is a list of relaxation and stress exercises.
 
