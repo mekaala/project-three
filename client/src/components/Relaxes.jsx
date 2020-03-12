@@ -50,31 +50,37 @@ export default class Relaxes extends Component {
     render() {
         return (
             <div className="relaxes">
-                <h1>RELAXATION EXERCISES</h1>
-                {
-                    this.state.relaxes.map((relax, i) => {
-                        const url = "/relaxes/" + relax._id;
-                        return (
-                            <div key={ i }>
-                                <Link to={ url }>{ relax.name }</Link>
-                            </div>
-                        )
-                    })
-                }
-                <div><button onClick={ this.toggleCreateForm }>
-                    { this.state.showCreateForm
-                        ? 'Cancel'
-                        : 'Create New Relax Exercise'
+                <h2>RELAXATION EXERCISES</h2>
+                <div className="index-container">
+                    <div className="index-list">
+                    {
+                        this.state.relaxes.map((relax, i) => {
+                            const url = "/relaxes/" + relax._id;
+                            return (
+                                <div  key={ i }>
+                                    <Link to={ url }>{ relax.name }</Link>
+                                </div>
+                            )
+                        })
                     }
-                </button></div>
-                { this.state.showCreateForm
-                    ? <form onSubmit={ this.submitCreateForm }>
-                        <input type="text" name="name" onChange={ this.changeInput } placeholder="Relax Exercise Name"/><br/>
-                        <input type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
-                        <input type="submit" value="Create New Relax Exercise"/>
-                    </form>
-                    : null
-                }
+                    </div>
+                    <div className="index-form">
+                        <div><button onClick={ this.toggleCreateForm }>
+                                { this.state.showCreateForm
+                                    ? 'Cancel'
+                                    : 'Create New Exercise'
+                                }
+                            </button></div>
+                            { this.state.showCreateForm
+                                ? <form onSubmit={ this.submitCreateForm }>
+                                    <input type="text" name="name" onChange={ this.changeInput } placeholder="Exercise Name"/><br/>
+                                    <input type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
+                                    <input type="submit" value="Create New Exercise"/>
+                                </form>
+                                : null
+                            }
+                    </div>
+                </div>
                 <a href="http://localhost:3001/api/relaxes" target="_blank">RELAXATION EXERCISE API</a>
             </div>
         )

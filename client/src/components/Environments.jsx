@@ -51,31 +51,37 @@ export default class Environments extends Component {
     render() {
         return (
             <div className="environments">
-                <h1>ENVIRONMENTS</h1>
-                {
-                    this.state.environments.map((environment, i) => {
-                        const url = "/environments/" + environment._id;
-                        return (
-                            <div key={ i }>
-                                <Link to={ url }>{ environment.name }</Link>
-                            </div>
-                        )
-                    })
-                }
-                <div><button onClick={ this.toggleCreateForm }>
-                    { this.state.showCreateForm
-                        ? 'Cancel'
-                        : 'Create New Environment'
+                <h2>ENVIRONMENTS</h2>
+                <div className="index-container">
+                    <div className="index-list">
+                    {
+                        this.state.environments.map((environment, i) => {
+                            const url = "/environments/" + environment._id;
+                            return (
+                                <div  key={ i }>
+                                    <Link to={ url }>{ environment.name }</Link>
+                                </div>
+                            )
+                        })
                     }
-                </button></div>
-                { this.state.showCreateForm
-                    ? <form onSubmit={ this.submitCreateForm }>
-                        <input type="text" name="name" onChange={ this.changeInput } placeholder="Creature Name"/><br/>
-                        <input type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
-                        <input type="submit" value="Create New Environment"/>
-                    </form>
-                    : null
-                }
+                    </div>
+                    <div className="index-form">
+                        <div><button onClick={ this.toggleCreateForm }>
+                                { this.state.showCreateForm
+                                    ? 'Cancel'
+                                    : 'Create New Environment'
+                                }
+                            </button></div>
+                            { this.state.showCreateForm
+                                ? <form onSubmit={ this.submitCreateForm }>
+                                    <input type="text" name="name" onChange={ this.changeInput } placeholder="Creature Name"/><br/>
+                                    <input type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
+                                    <input type="submit" value="Create New Environment"/>
+                                </form>
+                                : null
+                            }
+                    </div>
+                </div>
                 <a href="http://localhost:3001/api/environments" target="_blank">WORK ENVIRONMENT API</a>
             </div>
         )

@@ -22,8 +22,8 @@ function App() {
           <h3>Energize. Resonate.</h3>
         </div>
         <NavBar/>
-        <Home/>
         <Switch>
+          <Route exact path="/" component={ Home }/>
           <Route exact path="/environments" component={ Environments }/>
           <Route path="/environments/:environmentId" component={ SingleEnvironment }/>
           <Route exact path="/focuses" component={ Focuses }/>

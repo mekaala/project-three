@@ -11,11 +11,10 @@ body {
   text-align: center;
 }
 
-/* HOME */
-.home {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+img {
+  width: 80%;
+  border-radius: 6px;
+  margin: 1% 10%;
 }
 
 /* NAVIGATION */
@@ -26,6 +25,30 @@ body {
   font-size: 1.3em;
   background: rgb(15,12,1);
   box-shadow: -4px 1px 5px #000;
+}
+
+/* PAGES */
+.home, .environments, .relaxes, .focuses, .single-environment, .single-exercise {
+  margin: 5% 0%;
+}
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10% 0;
+}
+
+.index-container, .exercise-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10% 0;
+}
+.index-list, .exercise-description {
+  width: 50%;
+}
+.index-form, .exercise-form {
+  width: 50%;
 }
 
 a {
@@ -70,8 +93,10 @@ a:hover {
 }
 
 /* FOOTER */
-.bottom {
+.footer {
   font-size: 1.3em;
+}
+.bottom {
   display: flex;
   justify-content: space-between;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export default class SingleFocus extends Component {
     state = {
@@ -64,24 +64,30 @@ export default class SingleFocus extends Component {
 
         const { name, description } = this.state.focus;
         return (
-            <div className="single-focus">
+            <div className="single-exercise">
                 <h2>{ name }</h2>
-                <p>{ description }</p>
-                <div><button onClick={ this.toggleEditForm }>
-                    { this.state.showEditForm
-                        ? 'Cancel'
-                        : 'Edit Focus Exercise'
-                    }
-                </button></div>
-                { this.state.showEditForm
-                    ? <form onSubmit={ this.submitUpdateForm }>
-                        <input type="text" name="name" onChange={ this.changeInput } value={ this.state.editFocus.name }/><br/>
-                        <input type="text" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>
-                        <input type="submit" value="Update Focus Exercise"/>
-                    </form>
-                    : null
-                }
-                <button onClick={ this.clickDelete }>Delete Focus Exercise</button>
+                <div className="exercise-container">
+                    <div className="exercise-description">
+                        <p>{ description }</p>
+                    </div>
+                    <div className="exercise-form">
+                        <div><button onClick={ this.toggleEditForm }>
+                            { this.state.showEditForm
+                                ? 'Cancel'
+                                : 'Edit Exercise'
+                            }
+                        </button></div>
+                        { this.state.showEditForm
+                            ? <form onSubmit={ this.submitUpdateForm }>
+                                <input type="text" name="name" onChange={ this.changeInput } value={ this.state.editFocus.name }/><br/>
+                                <input type="text" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>
+                                <input type="submit" value="Update Exercise"/>
+                            </form>
+                            : null
+                        }
+                        <button onClick={ this.clickDelete }>Delete Exercise</button>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -6,9 +6,9 @@ export default class NavBar extends Component {
         return (
             <div>
                 <nav className="navbar">
-                    <Link to="/focuses">Focus Exercises</Link>
-                    <Link to="/environments">Environments</Link>
                     <Link to="/relaxes">Relaxation Exercises</Link>
+                    <Link to="/environments">Environments</Link>
+                    <Link to="/focuses">Focus Exercises</Link>
                 </nav>
             </div>
         )
