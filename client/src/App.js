@@ -10,14 +10,19 @@ import SingleEnvironment from './components/SingleEnvironment'
 import SingleFocus from './components/SingleFocus'
 import SingleRelax from './components/SingleRelax'
 import { Link } from 'react-router-dom'
+import Footer from './components/Footer';
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Home/>
+        <div className="title">
+          <Link to="/"><h1>Mindify</h1></Link>
+          <h3>Energize. Resonate.</h3>
+        </div>
         <NavBar/>
+        <Home/>
         <Switch>
           <Route exact path="/environments" component={ Environments }/>
           <Route path="/environments/:environmentId" component={ SingleEnvironment }/>
@@ -26,6 +31,7 @@ function App() {
           <Route exact path="/relaxes" component={ Relaxes }/>
           <Route path="/relaxes/:relaxId" component={ SingleRelax }/>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
