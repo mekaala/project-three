@@ -10,7 +10,9 @@ I created an app designed to combat stress at the workplace. For each environmen
 <img src="/wireframes/ERD.png" alt="ERD for Project Three"/>
 
 ## Wireframes
+### Component Layout
 <img src="/wireframes/DefaultComponents.png" alt="Default Component Layout"/>
+<img src="/wireframes/NavBar.png" alt="Navigation Bar"/>
 <img src="/wireframes/Home.png" alt="Home Page"/>
 
 ### Environment Components
@@ -24,6 +26,8 @@ I created an app designed to combat stress at the workplace. For each environmen
 ### Relaxation Exercise Components
 <img src="/wireframes/Relaxes.png" alt="Index of Focus Exercises"/>
 <img src="/wireframes/SingleRelax.png" alt="Individual Relax Exercise"/>
+
+### About
 
 
 Information Cited:
