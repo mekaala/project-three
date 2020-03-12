@@ -1,33 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  background: #313E50;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* HOME */
+.home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* NAVIGATION */
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  font-size: 1.3em;
+  background: rgb(15,12,1);
+  box-shadow: -4px 1px 5px #000;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: rgb(56, 143, 243);
+  transition-duration: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ABOUT */
+.about h1 {
+  color: white;
+  text-shadow: 1px 2px 2px #000;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.about-container {
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4% auto;
+}
+.about-container img {
+  width: 40%;
+  max-width: 350px;
+}
+.about-description {
+  width: 60%;
+  margin: 5%;
+
+}
+.about-description h2 {
+  width: 100%;
+}
+.about p {
+  width: 100%;
+  font-size: 1.15rem;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+/* FOOTER */
+.bottom {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: space-between;
 }
