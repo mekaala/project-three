@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react'
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -53,9 +54,10 @@ export default class Environments extends Component {
                 <h1>ENVIRONMENTS</h1>
                 {
                     this.state.environments.map((environment, i) => {
+                        const url = "/environments/" + environment._id;
                         return (
                             <div key={ i }>
-                                <Link to={ environment._id }>{ environment.name }</Link>
+                                <Link to={ url }>{ environment.name }</Link>
                             </div>
                         )
                     })

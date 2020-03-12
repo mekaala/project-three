@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
@@ -52,9 +53,10 @@ export default class Relaxes extends Component {
                 <h1>RELAXATION EXERCISES</h1>
                 {
                     this.state.relaxes.map((relax, i) => {
+                        const url = "/relaxes/" + relax._id;
                         return (
                             <div key={ i }>
-                                <Link to={ relax._id }>{ relax.name }</Link>
+                                <Link to={ url }>{ relax.name }</Link>
                             </div>
                         )
                     })

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react'
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -53,9 +54,11 @@ export default class Focuses extends Component {
                 <h1>FOCUS EXERCISES</h1>
                 {
                     this.state.focuses.map((focus, i) => {
+                        const url = "/focuses/" + focus._id;
+
                         return (
                             <div key={ i }>
-                                <Link to={ focus._id }>{ focus.name }</Link>
+                                <Link to={ url }>{ focus.name }</Link>
                             </div>
                         )
                     })
