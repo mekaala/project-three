@@ -64,7 +64,7 @@ export default class SingleRelax extends Component {
 
         const { name, description } = this.state.relax;
         return (
-            <div>
+            <div className="single-relax">
                 <h2>{ name }</h2>
                 <p>{ description }</p>
                 <div><button onClick={ this.toggleEditForm }>

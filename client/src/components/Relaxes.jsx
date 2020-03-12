@@ -49,7 +49,7 @@ export default class Relaxes extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="relaxes">
                 <h1>RELAXATION EXERCISES</h1>
                 {
                     this.state.relaxes.map((relax, i) => {

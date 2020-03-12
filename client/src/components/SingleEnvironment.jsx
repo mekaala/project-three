@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export default class SingleEnvironment extends Component {
     state = {
@@ -64,7 +64,7 @@ export default class SingleEnvironment extends Component {
 
         const { name, description } = this.state.environment;
         return (
-            <div>
+            <div className="single-environment">
                 <h2>{ name }</h2>
                 <p>{ description }</p>
                 <div><button onClick={ this.toggleEditForm }>

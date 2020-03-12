@@ -50,7 +50,7 @@ export default class Environments extends Component {
 
     render() {
         return (
-            <div>
+            <div className="environments">
                 <h1>ENVIRONMENTS</h1>
                 {
                     this.state.environments.map((environment, i) => {

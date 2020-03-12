@@ -50,7 +50,7 @@ export default class Focuses extends Component {
 
     render() {
         return (
-            <div>
+            <div className="focuses">
                 <h1>FOCUS EXERCISES</h1>
                 {
                     this.state.focuses.map((focus, i) => {

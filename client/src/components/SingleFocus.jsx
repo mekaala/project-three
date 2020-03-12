@@ -64,7 +64,7 @@ export default class SingleFocus extends Component {
 
         const { name, description } = this.state.focus;
         return (
-            <div>
+            <div className="single-focus">
                 <h2>{ name }</h2>
                 <p>{ description }</p>
                 <div><button onClick={ this.toggleEditForm }>
