@@ -50,6 +50,17 @@ img {
 .index-form, .exercise-form {
   width: 50%;
 }
+form {
+  text-align: right;
+  margin: 2% 25%;
+}
+label {
+  margin-right: 1%;
+  text-align: right;
+}
+.submit {
+  margin-top: 2%;
+}
 
 a {
   text-decoration: none;

@@ -74,14 +74,14 @@ export default class SingleRelax extends Component {
                         <div><button onClick={ this.toggleEditForm }>
                             { this.state.showEditForm
                                 ? 'Cancel'
-                                : 'Edit Exercise'
+                                : 'Update Exercise'
                             }
                         </button></div>
                         { this.state.showEditForm
                             ? <form onSubmit={ this.submitUpdateForm }>
-                                <input type="text" name="name" onChange={ this.changeInput } value={ this.state.editRelax.name }/><br/>
-                                <input type="text" name="description" onChange={ this.changeInput } value={ this.state.editRelax.description }/><br/>
-                                <input type="submit" value="Update Exercise"/>
+                                <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editRelax.name }/><br/>
+                                <label>Description: </label><input type="text" name="description" onChange={ this.changeInput } value={ this.state.editRelax.description }/><br/>
+                                <input className="submit" type="submit" value="Update Exercise"/>
                             </form>
                             : null
                         }
