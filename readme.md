@@ -28,6 +28,9 @@ I created an app designed to combat stress at the workplace. For each environmen
 <img src="/wireframes/SingleRelax.png" alt="Individual Relax Exercise"/>
 
 ### About
+<img src="/wireframes/About.png" alt="About Me Page"/>
+
+<a href="https://trello.com/b/7Ap1g11h/project-three">Trello Board</a>
 
 
 Information Cited:

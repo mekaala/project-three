@@ -62,10 +62,11 @@ export default class SingleFocus extends Component {
             return <Redirect to="/focuses"/>;
         }
 
-        const { name, description } = this.state.focus;
+        const { name, description, environment } = this.state.focus;
         return (
             <div className="single-exercise">
                 <h2>{ name }</h2>
+                <h4>Ideal for { environment }</h4>
                 <div className="exercise-container">
                     <div className="exercise-description">
                         <p>{ description }</p>
@@ -79,9 +80,9 @@ export default class SingleFocus extends Component {
                         </button></div>
                         { this.state.showEditForm
                             ? <form onSubmit={ this.submitUpdateForm }>
+                                <label>Environment: </label><input type="text" name="environment" onChange={ this.changeInput } value={ this.state.editFocus.environment }/><br/>
                                 <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editFocus.name }/><br/>
-                                <label>Description: </label><input type="text" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>
-                                <input className="submit" type="submit" value="Update Exercise"/>
+                                <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>                                <input className="submit" type="submit" value="Update Exercise"/>
                             </form>
                             : null
                         }

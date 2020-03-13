@@ -74,8 +74,9 @@ export default class Focuses extends Component {
                             </button></div>
                             { this.state.showCreateForm
                                 ? <form onSubmit={ this.submitCreateForm }>
+                                    <label>Environment: </label><input type="text" name="environment" onChange={ this.changeInput } placeholder="Environment"/><br/>
                                     <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } placeholder="Exercise Name"/><br/>
-                                    <label>Description: </label><input type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
+                                    <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
                                     <input className="submit" type="submit" value="Create New Exercise"/>
                                 </form>
                                 : null
