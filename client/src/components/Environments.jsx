@@ -83,7 +83,7 @@ export default class Environments extends Component {
                             }
                     </div>
                 </div>
-                <a href="http://localhost:3001/api/environments" target="_blank">WORK ENVIRONMENT API</a>
+                <a href="https://mekaala-mindify-app.herokuapp.com/api/environments" target="_blank">WORK ENVIRONMENT API</a>
             </div>
         )
     }

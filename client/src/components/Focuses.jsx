@@ -84,7 +84,7 @@ export default class Focuses extends Component {
                             }
                     </div>
                 </div>
-                <a href="http://localhost:3001/api/focuses" target="_blank">FOCUS EXERCISE API</a>
+                <a href="https://mekaala-mindify-app.herokuapp.com/api/focuses" target="_blank">FOCUS EXERCISE API</a>
             </div>
         )
     }
