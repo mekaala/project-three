@@ -177,7 +177,7 @@ a:hover {
   }
 
   .navbar {
-    font-size: 70%;
+    font-size: 75%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0;
