@@ -188,7 +188,9 @@ a:hover {
     width: auto;
     margin: 1% 0;
   }
-  
+  .left-side, .right-side {
+    width: auto;
+  }
   .about-container {
     display: block;
   }
