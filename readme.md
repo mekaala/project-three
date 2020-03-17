@@ -34,7 +34,7 @@ From the Home Page and the Navigation Bar, users can view the indexes of all thr
 ### About
 <img src="/wireframes/About.png" alt="About Me Page"/>
 
-<a href="https://mekaala-mindify-app.herokuapp.com">MINDIFY HEROKU APP</a>
+<a href="https://mekaala-mindify-app.herokuapp.com">MINDIFY HEROKU APP</a><br/>
 <a href="https://trello.com/b/7Ap1g11h/project-three">TRELLO BOARD</a>
 
 
