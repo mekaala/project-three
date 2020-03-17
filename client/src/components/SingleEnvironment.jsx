@@ -108,8 +108,8 @@ export default class SingleEnvironment extends Component {
                         </button></div>
                         { this.state.showLists
                             ? <div className="env">
-                                <div className="focus-env"><FocusEnvironment focuses={this.state.focuses}/></div>
                                 <div className="relax-env"><RelaxEnvironment relaxes={this.state.relaxes}/></div>
+                                <div className="focus-env"><FocusEnvironment focuses={this.state.focuses}/></div>
                             </div>
                             : null
                         }
