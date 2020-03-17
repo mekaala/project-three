@@ -30,7 +30,8 @@ I created an app designed to combat stress at the workplace. For each environmen
 ### About
 <img src="/wireframes/About.png" alt="About Me Page"/>
 
-<a href="https://trello.com/b/7Ap1g11h/project-three">Trello Board</a>
+<a href=https://mekaala-mindify-app.herokuapp.com">MINDIFY HEROKU APP</a>
+<a href="https://trello.com/b/7Ap1g11h/project-three">TRELLO BOARD</a>
 
 
 Information Cited:
