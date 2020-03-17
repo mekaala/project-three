@@ -62,11 +62,10 @@ export default class SingleFocus extends Component {
             return <Redirect to="/focuses"/>;
         }
 
-        const { name, description, environment } = this.state.focus;
+        const { name, description } = this.state.focus;
         return (
             <div className="single-exercise">
                 <h2>{ name }</h2>
-                <h4>Ideal for { environment }</h4>
                 <div className="exercise-container">
                     <div className="exercise-description">
                         <p>{ description }</p>

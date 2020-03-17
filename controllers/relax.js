@@ -12,14 +12,14 @@ relaxRouter.get('/', (req, res) => {
     })
 })
 
-// ==============================================
-// GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
-// ==============================================
-relaxRouter.get('/:environment', (req, res) => {
-    Relax.find({environment: req.params.environment}).then(environment => {
-      res.json(environment);
-    })
-  });
+// // ==============================================
+// // GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
+// // ==============================================
+// relaxRouter.get('/:environment', (req, res) => {
+//     Relax.find({environment: req.params.environment}).then(environment => {
+//       res.json(environment);
+//     })
+// });
 
 // =========================
 // GET SINGLE RELAX EXERCISE

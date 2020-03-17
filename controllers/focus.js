@@ -12,14 +12,14 @@ focusRouter.get('/', (req, res) => {
     })
 })
 
-// ==============================================
-// GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
-// ==============================================
-focusRouter.get('/:environment', (req, res) => {
-    Focus.find({environment: req.params.environment}).then(environment => {
-      res.json(environment);
-    })
-  });
+// // ==============================================
+// // GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
+// // ==============================================
+// focusRouter.get('/:environment', (req, res) => {
+//     Focus.find({environment: req.params.environment}).then(environment => {
+//       res.json(environment);
+//     })
+//   });
 
 
 // =========================

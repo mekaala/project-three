@@ -2,7 +2,7 @@ const mongoose = require('./connection.js')
 
 
 const Focus = new mongoose.Schema({
-    environment: {type: String, required: true},
+    environment: String,
     name: {type: String, required: true},
     description: {type: String, required: true},
 })
