@@ -5,6 +5,7 @@ const Focus = new mongoose.Schema({
     environment: String,
     name: {type: String, required: true},
     description: {type: String, required: true},
+    image: String
 })
 
 
