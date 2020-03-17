@@ -65,7 +65,7 @@ export default class SingleRelax extends Component {
         const { name, description, image } = this.state.relax;
         return (
             <div className="single-exercise">
-                <Link to="/relaxes">Back to Focus Exercise Index</Link>
+                <Link to="/relaxes">Back to Relaxation Exercise Index</Link>
                 <h2>{ name }</h2>
                 <div className="exercise-container">
                     <div className="exercise-description">
