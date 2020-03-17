@@ -52,7 +52,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 10% 0;
+  margin: 10% 1%;
 }
 .index-list, .exercise-description {
   width: 50%;
