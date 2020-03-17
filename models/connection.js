@@ -1,33 +1,19 @@
-/* Import the mongoose module
- *
- */
-const mongoose = require('mongoose');
+require('dotenv').config()
+const mongoose = require('mongoose')
 
-/* Step 1.
- *
- * TODO: replace <db-name> with the name of your mongo database. 
- * This will need to change for every new project you create.
- *
- */
-const connectionString = process.env.MONGODB_URI || "mongodb://localhost/mindify";
+if(process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI)
+} else {
+    mongoose.connect('mongodb://localhost/mindify')
+}
 
+mongoose.connection.on('error', (err) => {
+    console.error('MongoDB connection error: ', err)
+    process.exit(-1)
+})
 
-/* Step 2
- *
- * Open up a connection to the mongo database.
- *
- * NOTE: newUrlParser diables a deprecation warning
- */
-mongoose.connect(connectionString, { useNewUrlParser: true})
-  .then(() => {
-    console.log("connected to mongo at: " + connectionString);
-  });
+mongoose.connection.once('open', () => {
+    console.log("Mongoose has connected to MongoDB")
+})
 
-
-/* Export the mongoose object.
- *
- * This will allow us to use the same connection to our DB
- * across our different controllers.
- *
- */
 module.exports = mongoose
