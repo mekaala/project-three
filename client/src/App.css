@@ -178,12 +178,16 @@ a:hover {
 
   .navbar {
     font-size: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
   }
 
-  .index-container, .environment-container, .exercise-container {
+  .index-container, .environment-container, .exercise-container, .env {
     display: block;
     margin: 10% 1%;
   }
+  
   .index-list, .exercise-description, .index-form, .exercise-form {
     width: auto;
     margin: 1% 0;
