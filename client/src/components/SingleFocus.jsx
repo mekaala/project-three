@@ -92,6 +92,8 @@ export default class SingleFocus extends Component {
                         <button onClick={ this.clickDelete }>Delete Exercise</button>
                     </div>
                 </div>
+                <a href="https://mekaala-mindify-app.herokuapp.com/api/focuses" target="_blank">FOCUS EXERCISE API</a>
+
             </div>
         )
     }

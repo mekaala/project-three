@@ -133,6 +133,7 @@ export default class SingleEnvironment extends Component {
                         <button onClick={ this.clickDelete }>Delete Environment</button>
                     </div>
                 </div>
+                <a href="https://mekaala-mindify-app.herokuapp.com/api/environments" target="_blank">WORK ENVIRONMENT API</a>
             </div>
         )
     }
