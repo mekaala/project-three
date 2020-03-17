@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Router>
         <div className="title">
-          <Link to="/"><h1>Mindify</h1></Link>
+          <Link to="/"><h1>MINDIFY</h1></Link>
           <h3>Energize. Resonate.</h3>
         </div>
         <NavBar/>

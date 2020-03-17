@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat';
-  background: #313E50;
-  color: white;
+  background: #fff5d7;
+  color: black;
 }
 
 .App {
@@ -16,6 +16,15 @@ img {
   border-radius: 6px;
   margin: 1% 10%;
 }
+h2, h3 {
+  font-weight: lighter;
+}
+
+button {
+  font-family: 'Montserrat';
+  font-size: 1em;
+  border-radius: 8px;
+}
 
 /* NAVIGATION */
 .navbar {
@@ -25,6 +34,9 @@ img {
   font-size: 1.3em;
   background: rgb(15,12,1);
   box-shadow: -4px 1px 5px #000;
+}
+.navbar a{
+  color: white;
 }
 
 /* PAGES */
@@ -46,6 +58,9 @@ img {
 }
 .right-side {
   width: 40%;
+}
+.right-side button {
+  margin: 2% 0;
 }
 
 .index-container, .environment-container, .exercise-container {
@@ -82,14 +97,16 @@ input, textarea {
 }
 
 textarea {
-    height: 5em;
-    vertical-align: top;
-    resize: none;
+  height: 5em;
+  vertical-align: top;
+  resize: none;
 }
 
 .submit {
   margin-top: 2%;
   text-align: center;
+  font-family: 'Montserrat';
+  border-radius: 8px;
 }
 .env {
   display: flex;
@@ -99,7 +116,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 a:hover {
   color: rgb(56, 143, 243);
@@ -108,8 +125,7 @@ a:hover {
 
 /* ABOUT */
 .about h1 {
-  color: white;
-  text-shadow: 1px 2px 2px #000;
+  color: black;
   font-size: 2.5rem;
   text-align: center;
 }
@@ -142,7 +158,37 @@ a:hover {
 .footer {
   font-size: 1.3em;
 }
+.footer button {
+  font-family: 'Montserrat';
+  font-size: large;
+  border-radius: 8px;
+}
 .bottom {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 760px) {
+  .home-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    margin: 10% 0;
+  }
+
+  .index-container, .environment-container, .exercise-container {
+    display: block;
+    margin: 10% 1%;
+  }
+  .index-list, .exercise-description, .index-form, .exercise-form {
+    width: auto;
+    margin: 1% 0;
+  }
+  
+  .about-container {
+    display: block;
+  }
+  .about-description {
+    width: auto;
+  }
 }
