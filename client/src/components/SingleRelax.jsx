@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 export default class SingleRelax extends Component {
     state = {
@@ -62,13 +62,15 @@ export default class SingleRelax extends Component {
             return <Redirect to="/relaxes"/>;
         }
 
-        const { name, description } = this.state.relax;
+        const { name, description, image } = this.state.relax;
         return (
             <div className="single-exercise">
+                <Link to="/relaxes">Back to Focus Exercise Index</Link>
                 <h2>{ name }</h2>
                 <div className="exercise-container">
                     <div className="exercise-description">
                         <p>{ description }</p>
+                        <img src={ image } alt={ name }/>
                     </div>
                     <div className="exercise-form">
                         <div><button onClick={ this.toggleEditForm }>
@@ -82,6 +84,7 @@ export default class SingleRelax extends Component {
                                 <label>Environment: </label><input type="text" name="environment" onChange={ this.changeInput } value={ this.state.editRelax.environment }/><br/>
                                 <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editRelax.name }/><br/>
                                 <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } value={ this.state.editRelax.description }/><br/>
+                                <label>Image: </label><input type="text" name="image" onChange={ this.changeInput } value={ this.state.editRelax.image }/><br/>
                                 <input className="submit" type="submit" value="Update Exercise"/>
                             </form>
                             : null

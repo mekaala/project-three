@@ -75,7 +75,8 @@ export default class Environments extends Component {
                             { this.state.showCreateForm
                                 ? <form onSubmit={ this.submitCreateForm }>
                                     <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } placeholder="Environment Name"/><br/>
-                                    <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
+                                    <label>Description: </label><textarea type="text" name="description" onChange={ this.changeInput } placeholder="Description"/><br/>
+                                    <label>Image: </label><input type="text" name="image" onChange={ this.changeInput } placeholder="Environment Image (Optional)"/><br/>
                                     <input className="submit" type="submit" value="Create New Environment"/>
                                 </form>
                                 : null

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import FocusEnvironment from './FocusEnvironment';
 import RelaxEnvironment from './RelaxEnvironment';
 
@@ -91,13 +91,15 @@ export default class SingleEnvironment extends Component {
             return <Redirect to="/environments"/>;
         }
 
-        const { name, description } = this.state.environment;
+        const { name, description, image } = this.state.environment;
         return (
             <div className="single-environment">
+                <Link to="/environments">Back to Environments</Link>
                 <h2>{ name }</h2>
                 <div className="environment-container">
                     <div className="left-side">
                         <p>{ description }</p>
+                        <img src={ image } alt={ name }/>
                         <div><button onClick={ this.toggleLists }>
                             { this.state.showLists
                                 ? 'Close Recommended Exercises'
@@ -123,6 +125,7 @@ export default class SingleEnvironment extends Component {
                             ? <form className="exercise-form" onSubmit={ this.submitUpdateForm }>
                                 <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editEnvironment.name }/><br/>
                                 <label>Description: </label><textarea type="text" name="description" onChange={ this.changeInput } value={ this.state.editEnvironment.description }/><br/>
+                                <label>Image: </label><input type="text" name="image" onChange={ this.changeInput } value={ this.state.editEnvironment.image }/><br/>
                                 <input className="submit" type="submit" value="Update Environment"/>
                             </form>
                             : null

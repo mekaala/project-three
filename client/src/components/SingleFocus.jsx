@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 export default class SingleFocus extends Component {
     state = {
@@ -62,13 +62,15 @@ export default class SingleFocus extends Component {
             return <Redirect to="/focuses"/>;
         }
 
-        const { name, description } = this.state.focus;
+        const { name, description, image } = this.state.focus;
         return (
             <div className="single-exercise">
+                <Link to="/focuses">Back to Focus Exercise Index</Link>
                 <h2>{ name }</h2>
                 <div className="exercise-container">
                     <div className="exercise-description">
                         <p>{ description }</p>
+                        <img src={ image } alt={ name }/>
                     </div>
                     <div className="exercise-form">
                         <div><button onClick={ this.toggleEditForm }>
@@ -81,7 +83,9 @@ export default class SingleFocus extends Component {
                             ? <form onSubmit={ this.submitUpdateForm }>
                                 <label>Environment: </label><input type="text" name="environment" onChange={ this.changeInput } value={ this.state.editFocus.environment }/><br/>
                                 <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editFocus.name }/><br/>
-                                <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>                                <input className="submit" type="submit" value="Update Exercise"/>
+                                <label>Description: </label><textarea type="text" className="description" name="description" onChange={ this.changeInput } value={ this.state.editFocus.description }/><br/>
+                                <label>Image: </label><input type="text" name="image" onChange={ this.changeInput } value={ this.state.editFocus.image }/><br/>
+                                <input className="submit" type="submit" value="Update Exercise"/>
                             </form>
                             : null
                         }
