@@ -4,8 +4,17 @@ import profile from '../images/profile.jpg'
 
 export default class About extends Component {
     state = {
-        showAbout: false,
+        showMindify: false,
+        showAbout: false
     }
+
+
+    toggleMindify = () => {
+        const newShowMindify = !this.state.showMindify;
+        this.setState({
+            showMindify: newShowMindify,
+        });
+    };
 
     toggleAbout = () => {
         const newShowAbout = !this.state.showAbout;
@@ -16,6 +25,22 @@ export default class About extends Component {
     render() {
         return (
             <div className="footer">
+                <button onClick={ this.toggleMindify }>
+                    { this.state.showMindify
+                        ? 'Collapse'
+                        : 'About Mindify'
+                    }
+                </button>
+                { this.state.showMindify
+                    ?
+                    <div className="about">
+                    <h1>ABOUT MINDIFY</h1>
+                        <div className="mindify-container">
+                            <p>Mindify helps users understand what pressures they may feel or are currently experiencing in an environment, and provides a recommendation of exercises to perform. There are focus exercises which empower the mind to complete tasks, and relaxation exercises which calm the mind when faced with stress.</p>
+                        </div>
+                    </div>
+                    : null
+                }<br/>
                 <button onClick={ this.toggleAbout }>
                     { this.state.showAbout
                         ? 'Collapse'
