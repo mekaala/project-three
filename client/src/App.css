@@ -176,6 +176,10 @@ a:hover {
     margin: 10% 0;
   }
 
+  .navbar {
+    font-size: initial;
+  }
+
   .index-container, .environment-container, .exercise-container {
     display: block;
     margin: 10% 1%;
@@ -190,5 +194,8 @@ a:hover {
   }
   .about-description {
     width: auto;
+  }
+  .footer {
+    font-size: initial;
   }
 }
