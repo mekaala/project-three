@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react'
 import Axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
@@ -122,7 +123,7 @@ export default class SingleEnvironment extends Component {
                             }
                         </button></div>
                         { this.state.showEditForm
-                            ? <form className="exercise-form" onSubmit={ this.submitUpdateForm }>
+                            ? <form onSubmit={ this.submitUpdateForm }>
                                 <label>Name: </label><input type="text" name="name" onChange={ this.changeInput } value={ this.state.editEnvironment.name }/><br/>
                                 <label>Description: </label><textarea type="text" name="description" onChange={ this.changeInput } value={ this.state.editEnvironment.description }/><br/>
                                 <label>Image: </label><input type="text" name="image" onChange={ this.changeInput } value={ this.state.editEnvironment.image }/><br/>

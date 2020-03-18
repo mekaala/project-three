@@ -72,8 +72,12 @@ button {
 .index-list, .exercise-description {
   width: 50%;
 }
-.index-form, .exercise-form {
+.index-form {
   width: 50%;
+}
+
+.exercise-form {
+  width: 49%;
 }
 div button {
   text-align: center;

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react'
 import Axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
