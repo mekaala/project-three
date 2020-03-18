@@ -12,16 +12,6 @@ focusRouter.get('/', (req, res) => {
     })
 })
 
-// // ==============================================
-// // GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
-// // ==============================================
-// focusRouter.get('/:environment', (req, res) => {
-//     Focus.find({environment: req.params.environment}).then(environment => {
-//       res.json(environment);
-//     })
-//   });
-
-
 // =========================
 // GET SINGLE FOCUS EXERCISE
 // =========================
@@ -31,6 +21,16 @@ focusRouter.get('/:focusId', (req, res) => {
         res.json(focus)
     })
 })
+
+// // ==============================================
+// // GET FOCUS EXERCISE INDEX UNDER ONE ENVIRONMENT
+// // ==============================================
+
+focusRouter.get('/:environment', (req, res) => {
+    Focus.find({environment: req.params.environment}).then(focuses => {
+      res.json(focuses);
+    })
+});
 
 // =========================
 // CREATE NEW FOCUS EXERCISE
